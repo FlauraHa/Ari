@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Ari</string>
+    <string name="facebook_application_id" translatable="false">2480472102194913</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2480472102194913</string>
+    <string name="home_dashboard">Home</string>
+    <string name="shelves">Shelves</string>
+    <string name="account">Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

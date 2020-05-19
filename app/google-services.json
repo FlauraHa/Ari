@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "682066756236",
+    "firebase_url": "https://ari-4eff9.firebaseio.com",
+    "project_id": "ari-4eff9",
+    "storage_bucket": "ari-4eff9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682066756236:android:b2a83e0c83d23f5a3931a9",
+        "android_client_info": {
+          "package_name": "ro.handrea.flaura.ari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682066756236-8ln1qt12o0d6k96e7st0jq77rcvo7veh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnyfwizkmNluYLJiJmyQZ5FPETWfPK5BE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682066756236-8ln1qt12o0d6k96e7st0jq77rcvo7veh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
