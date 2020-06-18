@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:682066756236:android:b2a83e0c83d23f5a3931a9",
+        "mobilesdk_app_id": "1:682066756236:android:0a5c1644b837063e3931a9",
         "android_client_info": {
-          "package_name": "ro.handrea.flaura.ari"
+          "package_name": "com.flauraha.ari"
         }
       },
       "oauth_client": [
