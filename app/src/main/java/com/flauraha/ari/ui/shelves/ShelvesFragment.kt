@@ -1,5 +1,6 @@
 package com.flauraha.ari.ui.shelves
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.flauraha.ari.R
 import com.flauraha.ari.databinding.FragmentShelvesBinding
+import com.flauraha.ari.ui.search.BookSearchActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_shelves.*
 
 class ShelvesFragment : Fragment() {
     private lateinit var shelveCollectionAdapter: ShelveCollectionAdapter
@@ -25,17 +29,21 @@ class ShelvesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        shelveCollectionAdapter =
-            ShelveCollectionAdapter(this)
+        shelveCollectionAdapter = ShelveCollectionAdapter(this)
         viewPager = binding.pager
         viewPager.adapter = shelveCollectionAdapter
 
         TabLayoutMediator(binding.tabLayout, viewPager) { tab, position ->
             tab.text = context?.getString(
-                Shelve.getByPosition(
-                    position
-                ).titleStringId)
+                Shelve.getByPosition(position).titleStringId)
         }.attach()
+
+        binding.addFab.setOnClickListener {
+            activity?.let{
+                val intent = Intent (it, BookSearchActivity::class.java)
+                it.startActivity(intent)
+            }
+        }
     }
 }
 
@@ -44,9 +52,7 @@ class ShelveCollectionAdapter(fragment: Fragment) : FragmentStateAdapter(fragmen
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
-        return when(Shelve.getByPosition(
-            position
-        )) {
+        return when(Shelve.getByPosition(position)) {
             Shelve.READ -> ReadFragment()
             Shelve.READING -> ReadingFragment()
             Shelve.TOBEREAD -> ToBeReadFragment()
